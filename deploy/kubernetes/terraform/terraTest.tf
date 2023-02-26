@@ -46,6 +46,16 @@ resource "aws_s3_bucket" "example" {
   acl    = "public-read"
 }
 
+
+resource "aws_s3_bucket_versioning" "example" {
+  bucket = aws_s3_bucket.example.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+
 # Make the S3 bucket publicly accessible
 resource "aws_s3_bucket_policy" "example" {
   bucket = aws_s3_bucket.example.id

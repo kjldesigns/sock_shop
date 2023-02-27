@@ -43,7 +43,7 @@ resource "aws_db_instance" "example" {
 # Create the S3 bucket
 resource "aws_s3_bucket" "example" {
   bucket = "example-bucket"
-  acl    = "public-read"
+  acl    = "private"
 }
 
 

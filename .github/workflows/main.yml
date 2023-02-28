@@ -11,13 +11,10 @@ jobs:
       matrix:
         python-version: [3.8]
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Bridgecrew & checkov
-        uses: bridgecrewio/yor-action@main
-  
+      - uses: bridgecrewio/yor-action@main
       - uses: bridgecrewio/bridgecrew-action@master 
         env:
           PRISMA_API_URL: https://api.prismacloud.io

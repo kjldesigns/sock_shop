@@ -19,5 +19,4 @@ jobs:
           PRISMA_API_URL: https://api.prismacloud.io
         with:
           api-key: ${{ secrets.BC_API_KEY }}
-      - uses: bridgecrewio/yor-action@main
       
